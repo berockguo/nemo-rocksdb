@@ -56,6 +56,8 @@ ROCKSDB_PATH = $(CURDIR)/rocksdb/
 else
 $(info NOTICE: ROCKSDB_PATH should be absolute path)
 endif
+ROCKSDB_PATH = $(CURDIR)/../rocksdb/
+$(info $(ROCKSDB_PATH))
 
 LDFLAGS += $(PLATFORM_LDFLAGS)
 EXEC_FLAGS += -L$(CURDIR)/lib -L$(ROCKSDB_PATH)/ -lnemodb -lrocksdb
